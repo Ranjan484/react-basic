@@ -1,0 +1,22 @@
+// import { render } from '@testing-library/react';
+import React from 'react';
+import ReactDom from 'react-dom';
+//css
+import './style.css';
+//other import
+import { books } from './Books';
+import Book from './bookComponet';
+
+function BookList() {
+  const newList = books.map((book) => {
+    return <Book key={book.id} {...book} />;
+  });
+
+  return (
+    <>
+      <div className="container">{newList}</div>
+    </>
+  );
+}
+
+ReactDom.render(<BookList />, document.getElementById('root'));
