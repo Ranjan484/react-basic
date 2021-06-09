@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function Project() {
+function FormInput() {
   const [person, setPerson] = useState({ firstName: "", email: "", age: "" });
   const [people, setPeople] = useState([]);
 
@@ -61,7 +61,7 @@ function Project() {
       {people.map((person) => {
         return (
           <div key={person.id}>
-            <h3>{person.nam}</h3>
+            <h3>{person.firstName}</h3>
             <h4>{person.email}</h4>
             <h4>{person.age}</h4>
           </div>
@@ -71,4 +71,4 @@ function Project() {
   );
 }
 
-export default Project;
+export default FormInput;
